@@ -1,0 +1,124 @@
+{
+  "12055025": {
+    "word": {
+      "date": 1637663055.9381273,
+      "success_calls": 1,
+      "failed_calls": 6,
+      "tags": [
+        "noun",
+        "pl"
+      ]
+    },
+    "table": {
+      "date": 1637663055.9381273,
+      "success_calls": 12,
+      "failed_calls": 3,
+      "tags": [
+        "noun"
+      ]
+    },
+    "shoes": {
+      "date": 1637663055.9381273,
+      "success_calls": 3,
+      "failed_calls": 12,
+      "tags": [
+        "noun",
+        "pl"
+      ]
+    },
+    "hello": {
+      "date": 1637663055.9381273,
+      "success_calls": 4,
+      "failed_calls": 12,
+      "tags": [
+        "noun"
+      ]
+    },
+    "world": {
+      "date": 163766458.4144144,
+      "success_calls": 1,
+      "failed_calls": 1,
+      "tags": [
+        "noun"
+      ]
+    },
+    "kitchen": {
+      "date": 1637760052.135986,
+      "success_calls": 0,
+      "failed_calls": 1,
+      "tags": [
+        "latn"
+      ]
+    },
+    "on": {
+      "date": 1637760101.1811867,
+      "success_calls": 0,
+      "failed_calls": 1,
+      "tags": [
+        "latn"
+      ]
+    },
+    "man": {
+      "date": 1637760131.5709763,
+      "success_calls": 0,
+      "failed_calls": 1,
+      "tags": [
+        "latn"
+      ]
+    },
+    "\u043c\u0438\u0440": {
+      "date": 1637760199.9763112,
+      "success_calls": 0,
+      "failed_calls": 3,
+      "tags": [
+        "noun",
+        "sing"
+      ]
+    },
+    "\u0434\u0435\u043b\u043e": {
+      "date": 1637760200.0454528,
+      "success_calls": 1,
+      "failed_calls": 1,
+      "tags": [
+        "noun",
+        "sing"
+      ]
+    },
+    "\u043a\u043e\u0441\u043c\u043e\u0441": {
+      "date": 1637760200.107743,
+      "success_calls": 1,
+      "failed_calls": 1,
+      "tags": [
+        "noun",
+        "sing"
+      ]
+    },
+    "\u0442\u0440\u0443\u0434": {
+      "date": 1637760200.1711912,
+      "success_calls": 1,
+      "failed_calls": 2,
+      "tags": [
+        "noun",
+        "sing"
+      ]
+    },
+    "\u043c\u043e\u043b\u043e\u043a\u043e": {
+      "date": 1637760321.1665802,
+      "success_calls": 0,
+      "failed_calls": 1,
+      "tags": [
+        "noun",
+        "sing"
+      ]
+    },
+    "\u043d\u043e\u0432\u043e\u0435": {
+      "date": 1638442279.6532862,
+      "success_calls": 0,
+      "failed_calls": 1,
+      "tags": [
+        "sing",
+        "adjf"
+      ]
+    }
+  }
+}
