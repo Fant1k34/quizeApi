@@ -95,7 +95,8 @@ def feedback_structure_check(json):
             # Проверяем, что в translation находится перевод, а в result - 0 или 1
             if not users_data.get(word).get("translation").isalpha():
                 return False
-            if not users_data.get(word).get("result").isdigit():
+            print(users_data.get(word).get("result"))
+            if type(users_data.get(word).get("result")) != int:
                 return False
             try:
                 if int(users_data.get(word).get("result")) not in [0, 1]:
