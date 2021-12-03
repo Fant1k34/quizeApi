@@ -62,15 +62,72 @@ def get_all_tags_by_word(word, translation):
     return to_add
 
 
-@app.route('/update', methods=['POST'])
+def feedback_structure_check(json):
+    # Должен быть словарь и длина не должна быть нулевой
+    if type(json) != dict or len(json) == 0:
+        return False
+
+    # Все идентификаторы должны быть целыми числами
+    for user in json.keys():
+        try:
+            int(user)
+        except:
+            return False
+
+    # Все слова должны быть словами
+    for user in json.keys():
+        users_data = json.get(user)
+        for word in users_data.keys():
+            if not word.isalpha():
+                return False
+
+        # Все параметры слов должны быть только такими
+        for word in users_data.keys():
+            word_description = users_data.get(word)
+            for description in word_description.keys():
+                if description not in ["translation", "result"]:
+                    return False
+
+            for description in ["translation", "result"]:
+                if description not in word_description.keys():
+                    return False
+
+            # Проверяем, что в translation находится перевод, а в result - 0 или 1
+            if not users_data.get(word).get("translation").isalpha():
+                return False
+            if not users_data.get(word).get("result").isdigit():
+                return False
+            try:
+                if int(users_data.get(word).get("result")) not in [0, 1]:
+                    return False
+            except:
+                return False
+
+    return True
+
+
+
+@app.route('/feedback', methods=['POST'])
 def feedback():
     update = request.get_json(force=True, silent=False, cache=True)
+
+    try:
+        if not feedback_structure_check(dict(update)):
+            return "Error with json format"
+    except:
+        return "Error with parsing json"
+
     with open("data1.json", "r") as file:
         data = json.load(file)
 
     elements = 0
     for user in update.keys():
         all_words = update.get(user)
+        # Проверка, что такой пользователь есть в массиве
+        if user not in data.keys():
+            data[user] = {"words": {},
+                          "tags": {}}
+        # Добавляем слова/делаем фидбек
         for word in all_words.keys():
             result = update.get(user).get(word).get("result")
             if word not in data[user]["words"].keys(): # Если неизвестное слово - анализируем его
@@ -101,6 +158,7 @@ def feedback():
     with open("data1.json", "w") as file:
         file = json.dump(data, file)
     return "Success with {} failed".format(elements)
+
 
 if __name__ == '__main__':
     app.run()
