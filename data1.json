@@ -1,0 +1,40 @@
+{
+  "12055025": {
+    "words": {
+      "hello": {
+        "translation": "привет",
+        "date": 1637663055.9381273,
+        "success_calls": 1,
+        "failed_calls": 6
+      },
+      "cat": {
+        "translation": "кошка",
+        "date": 1637663075.9381273,
+        "success_calls": 0,
+        "failed_calls": 3
+      },
+      "dog": {
+        "translation": "собака",
+        "date": 1637665075.9381273,
+        "success_calls": 15,
+        "failed_calls": 3
+      },
+      "hedgehog": {
+        "translation": "ёж",
+        "date": 1637665015.9381273,
+        "success_calls": 1,
+        "failed_calls": 2
+      },
+      "thank": {
+        "translation": "спасибо",
+        "date": 1637661085.7984273,
+        "success_calls": 0,
+        "failed_calls": 3
+      }
+    },
+    "tags": {
+      "noun": ["hello", "cat", "dog", "hedgehog", "thank"],
+      "animals": ["cat", "dog", "hedgehog"]
+    }
+  }
+}
