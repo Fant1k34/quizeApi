@@ -20,14 +20,6 @@ def get_best_word(options, core_object, amount):
                     core_object.get("words").get(word)["success_calls"])) \
                     * 1 / (int(core_object.get("words").get(word)["success_calls"] + 1))
             metrics[(word, core_object["words"][word]["translation"])] = value
-
-    # for word in core_object.get("words").keys():
-    #    if options not in core_object.get("tags"):
-    #        continue
-    #    value = int(core_object["words"][word]["failed_calls"]) / (int(core_object["words"][word]["failed_calls"]) + int(core_object["words"][word]["success_calls"]))\
-    #            * 1 / (int(core_object["words"][word]["success_calls"] + 1))
-    #    metrics[(word, core_object["words"][word]["translation"])] = value
-    print(metrics)
     to_return = sorted(metrics.items(), key=lambda x: - x[1])[:min(amount, len(metrics))]
     to_return = [cort[0] for cort in to_return]
 
@@ -60,45 +52,55 @@ def get_current_words_by_code():
     except Exception:
         return "Error"
 
+def get_all_tags_by_word(word, translation):
+    morph = pymorphy2.MorphAnalyzer()
+    all_tags = ["NOUN", "LATN", "VERB", "plur", "sing", "ADJF", "ADJS"]
+    to_add = []
+    for el in all_tags:
+        if el in morph.parse(translation)[0].tag:
+            to_add.append(el.lower())
+    return to_add
+
 
 @app.route('/update', methods=['POST'])
 def feedback():
     update = request.get_json(force=True, silent=False, cache=True)
-    print(update)
-    with open("data.json", "r") as file:
+    with open("data1.json", "r") as file:
         data = json.load(file)
 
     elements = 0
-    for key in update.keys():
-        all_words = update.get(key)
+    for user in update.keys():
+        all_words = update.get(user)
         for word in all_words.keys():
-            result = all_words.get(word)
+            result = update.get(user).get(word).get("result")
+            if word not in data[user]["words"].keys(): # Если неизвестное слово - анализируем его
+                tags_for_word = get_all_tags_by_word(word, update.get(user).get(word).get("translation"))
+                dict_to_add = {"translation": update.get(user).get(word).get("translation"), "date": time.time(),
+                               "success_calls": 0, "failed_calls": 1}
+                data[user]["words"][word] = dict_to_add
 
-            if word not in data[key].keys():
-                morph = pymorphy2.MorphAnalyzer()
-                all_tags = ["NOUN", "LATN", "VERB", "plur", "sing", "ADJF", "ADJS"]
-                to_add = []
-                for el in all_tags:
-                    if el in morph.parse(word)[0].tag:
-                        to_add.append(el.lower())
-                dict_to_add = {"date": time.time(), "success_calls": 0, "failed_calls": 1, "tags": to_add}
-                data[key][word] = dict_to_add
+                # Добавляем теги по словам
+                for tag in tags_for_word:
+                    if tag in data[user]["tags"]:
+                        data[user]["tags"][tag].append(word)
+                    else:
+                        data[user]["tags"][tag] = []
+                        data[user]["tags"][tag].append(word)
                 continue
             try:
                 if int(result) == 1:
-                    data[key][word]["success_calls"] = data.get(key).get(word).get("success_calls") + 1
+                    data[user]["words"][word]["success_calls"] = \
+                        data.get(user).get("words").get(word).get("success_calls") + 1
                 else:
-                    data[key][word]["failed_calls"] = data.get(key).get(word).get("failed_calls") + 1
+                    data[user]["words"][word]["failed_calls"] = \
+                        data.get(user).get("words").get(word).get("failed_calls") + 1
             except:
                 elements += 1
                 continue
 
-    with open("data.json", "w") as file:
+    with open("data1.json", "w") as file:
         file = json.dump(data, file)
-
     return "Success with {} failed".format(elements)
-
-
 
 if __name__ == '__main__':
     app.run()
