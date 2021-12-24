@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78322a59-9ae5-4ee7-b7f7-b6ee99c0cfa2" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/ruwordnet.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data1.json" beforeDir="false" afterPath="$PROJECT_DIR$/data1.json" afterDir="false" />
@@ -15,6 +16,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Flask Main" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -32,8 +34,17 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
-  <component name="RunManager" selected="Flask server.Flask (app.py)">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Study\ИТМО\Прога\ФронтендПрога\WordsAnalizer" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Study\ИТМО\Прога\ФронтендПрога\WordsAnalizer" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python tests.Unittests for tests.TestStringMethods.test_get_best_word">
     <configuration name="Flask (app.py)" type="Python.FlaskServer" temporary="true" nameIsGenerated="true">
       <module name="WordsAnalizer" />
       <option name="target" value="$PROJECT_DIR$/app.py" />
@@ -41,7 +52,7 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -56,7 +67,7 @@
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -64,9 +75,73 @@
       <option name="launchJavascriptDebuger" value="false" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for tests.TestStringMethods.test_feedback_structure_check" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="WordsAnalizer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.TestStringMethods.test_feedback_structure_check&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for tests.TestStringMethods.test_get_all_tags_by_word" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="WordsAnalizer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.TestStringMethods.test_get_all_tags_by_word&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for tests.TestStringMethods.test_get_best_word" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="WordsAnalizer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;tests.TestStringMethods.test_get_best_word&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests in tests.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="WordsAnalizer" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python tests.Unittests for tests.TestStringMethods.test_get_best_word" />
+        <item itemvalue="Python tests.Unittests for tests.TestStringMethods.test_get_all_tags_by_word" />
+        <item itemvalue="Python tests.Unittests in tests.py" />
         <item itemvalue="Flask server.Flask (app.py)" />
+        <item itemvalue="Python tests.Unittests for tests.TestStringMethods.test_feedback_structure_check" />
       </list>
     </recent_temporary>
   </component>
@@ -88,7 +163,13 @@
       <workItem from="1638088565166" duration="9000" />
       <workItem from="1638441619206" duration="2173000" />
       <workItem from="1638541263160" duration="5793000" />
-      <workItem from="1638552131341" duration="2296000" />
+      <workItem from="1638552131341" duration="4267000" />
+      <workItem from="1638569398604" duration="840000" />
+      <workItem from="1639492218563" duration="59000" />
+      <workItem from="1639762841899" duration="2333000" />
+      <workItem from="1639830562287" duration="3407000" />
+      <workItem from="1639914820284" duration="3941000" />
+      <workItem from="1640367765055" duration="7970000" />
     </task>
     <task id="LOCAL-00001" summary="Delete code check and changed json type">
       <created>1638545130028</created>
@@ -111,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1638554103673</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Fixed">
+      <created>1638554478438</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1638554478438</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -121,49 +209,58 @@
     <MESSAGE value="Delete code check and changed json type" />
     <MESSAGE value="Full support json type" />
     <MESSAGE value="Add new users support and function checking json file" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add new users support and function checking json file" />
+    <MESSAGE value="Fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="393" y="6" key="CommitChangelistDialog2" timestamp="1638554102550">
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog" timestamp="1640379911543">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1638554102550" />
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom" timestamp="1638554331409">
+    <state x="93" y="93" width="1350" height="638" key="#com.intellij.execution.junit2.states.ComparisonFailureState$DiffDialog/0.0.1536.824@0.0.1536.824" timestamp="1640379911543" />
+    <state x="393" y="6" key="CommitChangelistDialog2" timestamp="1638554477354">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1638554331409" />
-    <state width="1493" height="261" key="GridCell.Tab.0.center" timestamp="1638554331409">
+    <state x="393" y="6" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1638554477354" />
+    <state width="1493" height="288" key="GridCell.Tab.0.bottom" timestamp="1640381162556">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1638554331409" />
-    <state width="1493" height="261" key="GridCell.Tab.0.left" timestamp="1638554331409">
+    <state width="1493" height="288" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1640381162556" />
+    <state width="1493" height="288" key="GridCell.Tab.0.center" timestamp="1640381162556">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1638554331409" />
-    <state width="1493" height="261" key="GridCell.Tab.0.right" timestamp="1638554331409">
+    <state width="1493" height="288" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1640381162556" />
+    <state width="1493" height="288" key="GridCell.Tab.0.left" timestamp="1640381162556">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1638554331409" />
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom" timestamp="1638554331409">
+    <state width="1493" height="288" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1640381162556" />
+    <state width="1493" height="288" key="GridCell.Tab.0.right" timestamp="1640381162556">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1638554331409" />
-    <state width="1493" height="261" key="GridCell.Tab.1.center" timestamp="1638554331409">
+    <state width="1493" height="288" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1640381162556" />
+    <state width="1493" height="256" key="GridCell.Tab.1.bottom" timestamp="1640380243780">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1638554331409" />
-    <state width="1493" height="261" key="GridCell.Tab.1.left" timestamp="1638554331409">
+    <state width="1493" height="256" key="GridCell.Tab.1.bottom/0.0.1536.824@0.0.1536.824" timestamp="1640380243780" />
+    <state width="1493" height="256" key="GridCell.Tab.1.center" timestamp="1640380243780">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1638554331409" />
-    <state width="1493" height="261" key="GridCell.Tab.1.right" timestamp="1638554331409">
+    <state width="1493" height="256" key="GridCell.Tab.1.center/0.0.1536.824@0.0.1536.824" timestamp="1640380243780" />
+    <state width="1493" height="256" key="GridCell.Tab.1.left" timestamp="1640380243780">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="261" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1638554331409" />
-    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1638552131078">
+    <state width="1493" height="256" key="GridCell.Tab.1.left/0.0.1536.824@0.0.1536.824" timestamp="1640380243780" />
+    <state width="1493" height="256" key="GridCell.Tab.1.right" timestamp="1640380243780">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1638552131078" />
+    <state width="1493" height="256" key="GridCell.Tab.1.right/0.0.1536.824@0.0.1536.824" timestamp="1640380243780" />
+    <state width="775" height="419" key="XDebugger.FullValuePopup" timestamp="1640368106091">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state width="775" height="419" key="XDebugger.FullValuePopup/0.0.1536.824@0.0.1536.824" timestamp="1640368106091" />
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog" timestamp="1640367779574">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="465" y="238" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1640367779574" />
     <state x="431" y="145" width="672" height="678" key="search.everywhere.popup" timestamp="1637661783899">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -174,24 +271,39 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app.py</url>
-          <line>33</line>
+          <line>58</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app.py</url>
-          <line>43</line>
+          <line>68</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/app.py</url>
-          <line>115</line>
-          <option name="timeStamp" value="3" />
+          <line>81</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app.py</url>
+          <line>175</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/app.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/WordsAnalizer$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1638554331393" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/WordsAnalizer$Flask__app_py_.coverage" NAME="Flask (app.py) Coverage Results" MODIFIED="1640380033659" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/WordsAnalizer$WordsAnalizer.coverage" NAME="WordsAnalizer Coverage Results" MODIFIED="1637668015432" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/WordsAnalizer$Unittests_for_tests_TestStringMethods_test_feedback_structure_check.coverage" NAME="Unittests for tests.TestStringMethods.test_feedback_structure_check Coverage Results" MODIFIED="1640371647469" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WordsAnalizer$Unittests_for_tests_TestStringMethods_test_returning_true.coverage" NAME="Unittests for tests.TestStringMethods.test_returning_true Coverage Results" MODIFIED="1640370778681" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WordsAnalizer$Unittests_for_tests_TestStringMethods_test_get_all_tags_by_word.coverage" NAME="Unittests for tests.TestStringMethods.test_get_all_tags_by_word Coverage Results" MODIFIED="1640380873044" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WordsAnalizer$Unittests_in_tests_py.coverage" NAME="Unittests in tests.py Coverage Results" MODIFIED="1640380368727" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/WordsAnalizer$Unittests_for_tests_TestStringMethods_test_get_best_word.coverage" NAME="Unittests for tests.TestStringMethods.test_get_best_word Coverage Results" MODIFIED="1640381162544" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

@@ -2,32 +2,57 @@ from flask import Flask, request
 import json
 import time
 import pymorphy2
+from ruwordnet import RuWordNet
 
 app = Flask(__name__)
 
 
+@app.route('/gettags')
+def get_tags():
+    id = request.args.get("id")
+    all_tags = get_all_tags_by_name(id)
+    if all_tags != None:
+        return {"tags": list(all_tags)}
+    else:
+        return "Error. No such code"
+
+
+def get_all_tags_by_name(id):
+    try:
+        with open("data1.json", "r") as read_file:
+            data = json.load(read_file)
+        return data.get(str(id)).get("tags").keys()
+    except:
+        return None
+
+
+
 def get_best_word(options, core_object, amount):
-    metrics = {}
-    dict_to_return_words = {}
+    try:
+        metrics = {}
+        dict_to_return_words = {}
+        options = options.lower()
 
-    for tag in core_object.get("tags").keys():
-        if tag != options:
-            continue
-        for word in core_object.get("tags").get(tag):
-            core_object.get("words").get(word)
-            value = int(core_object.get("words").get(word)["failed_calls"]) / (
-                        int(core_object.get("words").get(word)["failed_calls"]) + int(
-                    core_object.get("words").get(word)["success_calls"])) \
-                    * 1 / (int(core_object.get("words").get(word)["success_calls"] + 1))
-            metrics[(word, core_object["words"][word]["translation"])] = value
-    to_return = sorted(metrics.items(), key=lambda x: - x[1])[:min(amount, len(metrics))]
-    to_return = [cort[0] for cort in to_return]
+        for tag in core_object.get("tags").keys():
+            if tag != options:
+                continue
+            for word in core_object.get("tags").get(tag):
+                core_object.get("words").get(word)
+                value = int(core_object.get("words").get(word)["failed_calls"]) / (
+                            int(core_object.get("words").get(word)["failed_calls"]) + int(
+                        core_object.get("words").get(word)["success_calls"]) + 0.001) \
+                        * 1 / (int(core_object.get("words").get(word)["success_calls"] + 1))
+                metrics[(word, core_object["words"][word]["translation"])] = value
+        to_return = sorted(metrics.items(), key=lambda x: - x[1])[:min(amount, len(metrics))]
+        to_return = [cort[0] for cort in to_return]
 
-    for el in to_return:
-        dict_to_return_words[el[0]] = el[1]
+        for el in to_return:
+            dict_to_return_words[el[0]] = el[1]
 
-    return {"words": dict_to_return_words}
-
+        print(metrics)
+        return {"words": dict_to_return_words}
+    except:
+        return {}
 
 @app.route('/getwords')
 def get_current_words_by_code():
@@ -44,21 +69,29 @@ def get_current_words_by_code():
         data = json.load(read_file)
     try:
         words = get_best_word(option, data.get(id), int(amount))
-        return str(words)
+        return str(words).replace("\'", "\"")
     except ValueError:
         return "Error. Incorrect value for amount"
     except TypeError:
         return "Error. Incorrect code value"
     except Exception:
-        return "Error"
+        return "Error. This person doesn't exist"
 
 def get_all_tags_by_word(word, translation):
-    morph = pymorphy2.MorphAnalyzer()
-    all_tags = ["NOUN", "LATN", "VERB", "plur", "sing", "ADJF", "ADJS"]
-    to_add = []
-    for el in all_tags:
-        if el in morph.parse(translation)[0].tag:
-            to_add.append(el.lower())
+    try:
+        morph = pymorphy2.MorphAnalyzer()
+        all_tags = ["NOUN", "LATN", "VERB", "plur", "sing", "ADJF", "ADJS"]
+        to_add = []
+        for el in all_tags:
+            if el in morph.parse(translation)[0].tag:
+                to_add.append(el.lower())
+        wn = RuWordNet(filename_or_session='ruwordnet.db')
+        number = 0
+        for i, sense in enumerate(wn.get_senses(translation)):
+            if i == number:
+                to_add.append(sense.synset.hypernyms[i].title.lower())
+    except:
+        return []
     return to_add
 
 
@@ -74,11 +107,22 @@ def feedback_structure_check(json):
         except:
             return False
 
-    # Все слова должны быть словами
+    # Все слова должны быть словами и не повторяться! А также пользователи не должны повторяться
+    prev_user = set()
     for user in json.keys():
+        prev_user_len = len(prev_user)
+        prev_user.add(user)
+        if prev_user_len == len(prev_user):
+            return False
+
         users_data = json.get(user)
+        word_set = set()
         for word in users_data.keys():
             if not word.isalpha():
+                return False
+            previous = len(word_set)
+            word_set.add(word)
+            if previous == len(word_set):
                 return False
 
         # Все параметры слов должны быть только такими
@@ -159,6 +203,9 @@ def feedback():
     with open("data1.json", "w") as file:
         file = json.dump(data, file)
     return "Success with {} failed".format(elements)
+
+def returning_true():
+    return True
 
 
 if __name__ == '__main__':
