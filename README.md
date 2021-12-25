@@ -46,7 +46,7 @@ URL: http://courseproject.pythonanywhere.com/
     }
 }
 
-## /getwords?code=code&option=option&amount=amount - Get query for get information and get all stats:
+## 2. /getwords?code=code&option=option&amount=amount - Get query for get information and get all stats:
 ### Info:
 Return one or several words by tags for nessecary code
 
